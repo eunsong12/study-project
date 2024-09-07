@@ -1,0 +1,181 @@
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* XEICON */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* SF 함박눈 */
+@font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 나눔고딕 */
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+/* SB어그로 */
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-gray: #979797;
+    --color-background: #109CEB;
+
+    --text-small: 0.875rem;     /* 14px */
+    --text-base: 1rem;          /* 16px */
+    --text-medium: 1.125rem;    /* 18px */
+    --text-large: 1.75rem;      /* 25px */
+    --text-Xlarge: 4rem;      /* 64px */
+}
+
+body{}
+
+.inner{
+    margin: 0 auto;
+    max-width: 1720px;
+    width: 100%;
+    /* background-color: red; */
+}
+
+/* 헤더 */
+header{}
+header .inner{}
+header div.emoticon{
+    display: flex;
+    position: fixed;
+    z-index: 900;
+    top: 20px;
+    right: 20px;
+}
+header .emoticon .sound{
+    display: flex;
+    gap: 0;
+    top: 80px;
+}
+header .emoticon .sound img{
+    width: 20px;
+}
+header .emoticon .sound i{
+    font-size: var(--text-base);
+}
+
+header .emoticon .menu .menu1{
+    position: relative;
+    width: 40px;
+}
+header .emoticon .menu .menu2{
+    position: absolute;
+    width: 50px;
+    left: -45px;
+    top: -5px;
+    
+    display: none;
+}
+header .emoticon .menu:hover .menu1{
+    display: none;
+}
+header .emoticon .menu:hover .menu2{
+    display: block;
+}
+div.menu-back{
+    display: none;
+
+    height: 100vh;
+    background-color: #837874;
+    background: linear-gradient(
+        90deg,
+        #837874
+    );
+    /* 여기서 그라디언트 주는것보다 포토샵에서 수정해서 이미지 넣는게 더 빠를듯 */
+
+    /* before, after / 필터로 넣는 방법 생각해보기 */
+}
+div.modal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.modal .modal-list{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+div.modal div{
+    color: var(--color-white);
+    font-family: 'SBAggroB';
+    font-size: var(--text-Xlarge);
+}
+
+
+/* 메인배경 이미지 */
+section.mainvisual{}
+section.mainvisual .mainvisual-back{}
+section.mainvisual .visualContainer{
+    background-color: var(--color-background);
+    height: 100vh;
+
+    position: relative;
+}
+
+/* margin: 200px auto를 주면 부모요소를 안벗어나고 늘어나야 하지 않나?? 왜 부모요소를 벗어나면서 공간이 생기지? */
+section.mainvisual .visual-totoro{
+    /* display: none; */
+    
+    max-width: 800px;
+    width: 100%;
+    font-size: 0;
+    margin: 0 auto;
+    /* background-color: red; */
+    padding-top: 200px;
+    box-sizing: border-box;
+}
+section.mainvisual .visual-totoro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* position을 안주고 오른쪽 맞춤 할 수 있는 방법은 없을까? */
+section.mainvisual .visual-castle{
+    display: none;
+
+    position: absolute;
+    max-width: 1889px;
+    width: 100%;
+    font-size: 0;
+    right: 0;
+    /* padding-bottom: 0;
+    padding-right: 0; */
+    /* background-color: red; */
+}
+section.mainvisual .visual-castle img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* mainvisual init Animation */
+section.mainvisual .inner{
+    position: relative;
+}
+section.mainvisual .visual-totoro{
+    transition: all 1s;
+}
+section.mainvisual .visual-totoro.active{
+    position: absolute;
+    width: 180px;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    padding: 0;
+}
+/* 1920 * 1080 */

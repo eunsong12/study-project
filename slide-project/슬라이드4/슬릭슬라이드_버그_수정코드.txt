@@ -1,0 +1,9 @@
+        if (current !== next) {
+            $('.slick-current + .slick-cloned').each(function(index, node) {
+                const $node = $(node);
+                setTimeout(function() {
+                    $node.addClass('slick-current');
+                    $node.addClass('slick-active');
+                });
+            });
+        }

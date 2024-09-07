@@ -1,0 +1,27 @@
+section{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrap{
+    display: flex;
+    gap: 40px;
+}
+.wrap div{
+    padding: 20px 40px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.wrap div.active{
+    background: red;
+}
+.buttons button{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+.buttons{
+    margin-top: 100px;
+}

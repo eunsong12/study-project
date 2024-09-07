@@ -1,0 +1,342 @@
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* XEICON */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* SF 함박눈 */
+@font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 나눔고딕 */
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+/* SB어그로 */
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-gray: #979797;
+    --color-background: #109CEB;
+
+    --text-small: 0.875rem;     /* 14px */
+    --text-base: 1rem;          /* 16px */
+    --text-medium: 1.125rem;    /* 18px */
+    --text-large: 1.75rem;      /* 25px */
+    --text-Xlarge: 4rem;      /* 64px */
+}
+
+body{}
+
+.inner{
+    margin: 0 auto;
+    max-width: 1720px;
+    width: 100%;
+    /* background-color: red; */
+}
+
+/* 헤더 */
+header{}
+header .inner{}
+header .inner div{
+    display: flex;
+    position: fixed;
+    z-index: 900;
+    top: 20px;
+    right: 20px;
+}
+header .inner .sound{
+    display: flex;
+    gap: 0;
+    top: 80px;
+}
+header .inner .sound img{
+    width: 20px;
+}
+header .inner .sound i{
+    font-size: var(--text-base);
+}
+
+header .inner .menu .menu1{
+    position: relative;
+    width: 40px;
+}
+header .inner .menu .menu2{
+    position: absolute;
+    width: 50px;
+    left: -45px;
+    top: -5px;
+    
+    display: none;
+}
+header .inner .menu:hover .menu1{
+    display: none;
+}
+header .inner .menu:hover .menu2{
+    display: block;
+}
+div.menu-back{
+    display: none;
+
+    height: 100vh;
+    background-color: #837874;
+    background: linear-gradient(
+        90deg,
+        #837874
+    );
+    /* 여기서 그라디언트 주는것보다 포토샵에서 수정해서 이미지 넣는게 더 빠를듯 */
+
+    /* before, after / 필터로 넣는 방법 생각해보기 */
+}
+div.menu-back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.menu-back ul{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+div.menu-back ul li{
+    color: var(--color-white);
+    font-family: 'SBAggroB';
+    font-size: var(--text-Xlarge);
+}
+
+
+/* 메인배경 이미지 */
+section.main-back{
+    background-color: var(--color-background);
+}
+section.main-back .mainBackDiv{
+    width: 100%;
+    height: 100vh;
+    max-width: 800px;
+    font-size: 0;
+    margin: 0 auto;
+    padding: 50px;
+}
+section.main-back .mainBackDiv2{
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+    max-width: 1500px;
+    font-size: 0;
+    margin-left: auto;
+}
+section.main-back .mainBackDiv img{
+    width: 100%;
+
+    transition: all 1s;
+}
+section.main-back .mainBackDiv2 img{
+    width: 100%;
+}
+section.main-back .inner{
+    position: relative;
+}
+section.main-back .mainBackDiv.active{
+    position: absolute;
+}
+section.main-back .mainBackDiv img.active{
+    position: absolute;
+    width: 180px;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+section.main-back .mainBackDiv2.active{
+    display: block;
+
+    transition: all 1s;
+}
+/* 1920 * 1080 */
+
+/* 백그라운드 비디오 */
+section.anime {
+    position: relative;
+    background-color: dodgerblue;
+}
+section .videoArea {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: red;
+}
+section .abc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+section .abc.fixed {
+    position:fixed;
+}
+
+section.anime video#introVideo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+section.anime .contents {
+    position: relative;
+    z-index: 100;
+    font-size: 100px;
+    color: #fff;
+    margin: 200px;
+}
+/* figure{
+    width: 100%;
+    height: 100%;
+}
+video{
+    width: 100%;
+    min-width: 1600px;
+} */
+
+
+/* 영화 추천 */
+section.movie{}
+section.movie .slider{}
+section.movie {}
+
+section.movie .sample {}
+section.movie .sample .slick-track {
+    margin: 0 -50px;
+}
+section.movie .sample .slick-slide {
+    width: 400px;
+    /* height: 600px; */
+    margin: 0 100px;
+    overflow: hidden;
+    /* border: 5px solid orange; */
+}
+section.movie .sample .item:hover .overlay {
+    opacity: 1;
+}
+
+/* section.movie .sample .item:hover .bg {
+    display: block;
+} */
+
+/* section.movie .sample .item.scale .bg img {
+    transform: scale(1.1);
+} */
+
+section.movie .sample .item {
+    position: relative;
+}
+section.movie .sample .item .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    transition-duration: 0.55s;
+    transition-property: opacity;
+    z-index: 100;
+}
+section.movie .sample .item .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 100;
+    overflow: hidden;
+
+}
+section.movie .sample .item .bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    /* transition-duration: 3s; */
+    transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    transition-property: all;
+}
+section.movie .sample .item .contents {
+    /* border: 2px solid red; */
+    position: relative;
+    z-index: 10;
+}
+
+section.movie .sample .item .textContents {
+    color: #fff;
+    position: relative;
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.movie .item .movieImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 전시회 추천 */
+section.exhibition{}
+section.exhibition .sticky{}
+section.exhibition .sticky .effect-items{}
+section.exhibition .sticky .effect-items p{}
+section.exhibition .sticky .effect-items h2{}
+section.exhibition .sticky .effect-items em{}
+section.exhibition .sticky .effect-items img{}
+
+section.exhibition .sticky .item-headline{}
+section.exhibition .sticky .item-headline h3{}
+section.exhibition .sticky .item-headline button{}
+section.exhibition .sticky .item-headline button a{}
+
+section.exhibition .list{}
+section.exhibition .list .gird-layout-inner{}
+section.exhibition .list .grid-layout-cell.effect-date.actived{}
+section.exhibition .list .grid-layout-cell.effect-date.actived img{}
+
+
+/* 영상재생 */
+section.video{}
+
+
+/* 푸터 */
+footer{}
+footer .inner{}
+footer .inner img{}
+footer .inner ul{}
+footer .inner ul li{}

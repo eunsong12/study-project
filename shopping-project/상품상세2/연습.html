@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <script src="../common/js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+
+
+            const $div = $("div");
+            
+            
+            
+            $div.css({
+                width: "200px",
+                height: "200px",
+                background: "red"
+            });
+
+            $div.find("a").css({
+                color: "#fff",
+                fontSize: "20px",
+                fontWeight: "bold",
+                textDecoration: "none"
+            });
+            
+            $div.on("click", function () {
+                const bg = $(this).css("backgroundColor");
+                let css = {};
+                
+                if (bg === "rgb(255, 0, 0)") {
+                    css = {
+                    background: "blue",
+                    border: "10px solid black",
+                    transition: "all 0.5s"
+                    };
+                };
+
+                if (bg === "rgb(0, 0, 255)"){
+                    css = {
+                    background: "red",
+                    border: "10px solid yellow",
+                    transition: "all 0.5s"
+                    };
+                };
+                
+              $(this).css(css)
+
+            });
+        });
+    </script>
+</head>
+<body>
+    
+
+    <div>
+        <a href="">
+            테스트중입니다
+            <img src="" alt="테스트중입니다">
+        </a>
+    </div>
+
+
+</body>
+</html>

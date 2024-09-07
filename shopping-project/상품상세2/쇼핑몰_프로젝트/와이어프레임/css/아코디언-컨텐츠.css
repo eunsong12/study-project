@@ -1,0 +1,117 @@
+/* Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Font Awesome 4.7.0 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+body {
+    font-family: "Noto Sans Kr", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+#root {}
+
+section.faq {}
+section.faq .inner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+section.faq .head {
+    padding: 40px 0;
+    border-bottom: 1px solid black;
+}
+section.faq .head h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+}
+section.faq .body {
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+section.faq ul {
+    width: 50%;
+}
+section.faq ul li {}
+
+section.faq ul li .question {
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+section.faq ul li .question strong {
+    /*color: #fff;*/
+}
+section.faq ul li .question i.fa-angle-down {
+    transform: rotate(-90deg);
+}
+
+section.faq ul li .question.active {
+    background: #203049;
+}
+section.faq ul li .question.active strong {
+    color: #fff;
+}
+section.faq ul li .question.active i.fa-angle-down {
+    color: orange;
+    transform: rotate(0);
+}
+
+
+
+section.faq ul li .answer {
+    padding: 15px;
+    display: none;
+}
+section.faq ul li .answer p {
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+}
+section.faq .rightImage {
+    width: 50%;
+    font-size: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

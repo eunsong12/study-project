@@ -1,0 +1,82 @@
+body {
+	height: 200vh;
+}
+#root {}
+
+header {
+	height: 100px;
+	box-sizing: border-box;
+	padding: 20px 100px;
+	font-size: 20px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	background: orange;
+}
+header ul {
+	display: flex;
+	gap: 30px;
+	margin-left: auto;
+}
+/* 우측 화면 고정 사이드바 */
+.fixedSidebar {
+	position: fixed;
+	right: 10%;
+	top: 30%;
+}
+.fixedSidebar .popularProducts {
+	width: 100px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.fixedSidebar .popularProducts li {
+	font-size: 0;
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.fixedSidebar .popularProducts li img {
+	width: 100%;
+}
+/* Active Class */
+.fixedSidebar .popularProducts li.active {
+	border: 1px solid #000;
+}
+
+
+
+section.imageGallery {
+	margin: 50px;
+}
+section.imageGallery .productImage {
+	font-size: 0;
+	width: 500px;
+	border: 2px solid #ccc;
+}
+section.imageGallery .productImage img {
+	width: 100%;
+}
+
+section.imageGallery .productMenu {
+	display: flex;
+	gap: 10px;
+	padding: 20px;
+}
+section.imageGallery .productMenu li {
+	font-size: 0;
+	cursor: pointer;
+	width: 150px;
+	border: 1px solid #ccc;
+}
+section.imageGallery .productMenu li img {
+	width: 100%;
+}
+/* Active Class */
+section.imageGallery .productMenu li.active {
+	border: 1px solid #000;
+}
+

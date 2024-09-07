@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* XEICON */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#root{}
+section.branch{
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(../images/location_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.branch .inner{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+section.branch .contentArea{
+    display: flex;
+    align-items: center;
+}
+section.branch .leftContents{
+    /* border: 5px solid #fff; */
+    /* width: calc(100% - 900); */
+    max-width: 620px;
+    min-width: 500px;
+    max-height: 580px;
+    flex: 1;
+    overflow: hidden;
+
+    /* background-color: red; */
+}
+
+section.branch .leftContents .textGroups{
+    position: relative;
+    height: 580px;
+}
+@media (max-width: 1320px) {
+    section.branch .contentArea{
+        flex-direction: column;
+        justify-content: center;
+    }
+    section.branch .leftContents{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    section.branch .textGroups .group{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+section.branch .textGroups .group{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.branch .textGroups .group .cate{
+    font-size: 20px;
+    font-weight: 500;
+    color: #ee874e;
+}
+section.branch .textGroups .group h2{
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 8px;
+}
+section.branch .textGroups .group ul{
+    margin-top: 14px;
+}
+section.branch .textGroups .group ul li{
+    font-size: 17px;
+    color: #ccc;
+    padding: 16px 0;
+    padding-left: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    background-position: left center;
+}
+section.branch .textGroups .group ul li:nth-child(1){
+    background-image: url(../images/location.svg);
+}
+section.branch .textGroups .group ul li:nth-child(2){
+    background-image: url(../images/clock.svg);
+}
+section.branch .textGroups .group ul li:nth-child(3){
+    background-image: url(../images/tel.svg);
+}
+section.branch .textGroups .group .more{
+    margin-top: 60px;
+}
+section.branch .textGroups .group .more a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+section.branch .textGroups .group .more a i.xi-plus{}
+
+
+
+
+/* Group Animation Setting */
+section.branch .textGroups .group .cate,
+section.branch .textGroups .group h2,
+section.branch .textGroups .group ul li,
+section.branch .textGroups .group .more{
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Group Animation Delay */
+section.branch .textGroups .group.active .cate{
+    transition-delay: 0.5s;
+}
+section.branch .textGroups .group.active h2{
+    transition-delay: 0.6s;
+}
+section.branch .textGroups .group.active ul li:nth-child(1){
+    transition-delay: 0.1s;
+}
+section.branch .textGroups .group.active ul li:nth-child(2){
+    transition-delay: 0.2s;
+}
+section.branch .textGroups .group.active ul li:nth-child(3){
+    transition-delay: 0.3s;
+}
+section.branch .textGroups .group.active .more{
+    transition-delay: 0.4s;
+}
+
+/* Group Animation Active Success */
+section.branch .textGroups .group.active .cate,
+section.branch .textGroups .group.active h2,
+section.branch .textGroups .group.active ul li,
+section.branch .textGroups .group.active .more{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+}
+
+
+
+/* section.branch .textGroups .group{
+    opacity: 0;
+}
+section.branch .textGroups .group.active{
+    opacity: 1;
+} */
+
+
+section.branch .rightContents{
+    max-width: 980px;
+    width: calc(100% - 500px);
+    flex: 1;
+}
+section.branch .rightContents .slideArea{}
+section.branch .slideArea .slider{}
+section.branch .slideArea .slider .slick-slide{}
+section.branch .slideArea .slider .slick-slide .item{
+    font-size: 0;
+}
+section.branch .slideArea .slider .slick-slide .item img{
+    width: 100%;
+}
+section.branch .slideArea .slideNav{
+    margin-top: 30px;
+}
+section.branch .slideArea .slideNav ul.branchMenu{
+    display: flex;
+    gap: 15px;
+}
+section.branch .slideArea .slideNav .branchMenu li{
+    color: #fff;
+    font-size: 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #fff;
+    flex: 1;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+section.branch .slideArea .slideNav .branchMenu li.slick-active{
+    opacity: 1;
+}
+
+
+.menu{
+    display: none;
+
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    z-index: 200;
+}
+@media (max-width: 767px) {
+    .menu{
+        display: block;
+    }
+    
+}
+.overlay{
+    display: none;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.49);
+    z-index: 110;
+}
+.modal{
+    display: none;
+    
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #ee874e;
+    z-index: 120;
+}
+.modal div{
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}

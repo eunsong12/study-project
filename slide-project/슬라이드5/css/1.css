@@ -1,0 +1,62 @@
+/* XEICON */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+section{}
+section.visualArea{
+    /* background-color: red; */
+}
+section.visualArea .slider{}
+
+section.visualArea .slider .slick-list{
+    margin: 0 -20px;
+}
+section.visualArea .slider .slick-slide{
+    width: 400px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+section.visualArea .slider .slick-slide h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+section.visualArea .slick-slide.slick-active{
+    background-color: orange;
+}
+section.visualArea .slick-slide.slick-active h2{
+    color: #fff;
+}
+
+section.optionArea{
+    padding: 50px 0;
+}
+section .btnContents{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+section .btnContents button{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+}
+section .btnContents button i{}
+
+
+section.secondArea{}
+section.secondArea .slider{}
+section.secondArea .slider .slick-slide{
+    background-color: red;
+    padding: 20px 0;
+}
+section.secondArea .slider .slick-slide h2{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}

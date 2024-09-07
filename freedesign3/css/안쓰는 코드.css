@@ -1,0 +1,145 @@
+
+section.movie .item {
+    position: relative;
+    /* background-color: red; */
+}
+section.movie .item .textBox{
+    /* background-color: red; */
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+section.movie .item .textBox p{
+    color: var(--color-light-gray);
+    font-family: 'nanumgothic', sans-serif;
+    font-size: var(--text-base);
+}
+section.movie .item .textBox h2{
+    color: var(--color-black);
+    font-family: 'SF_HambakSnow';
+    font-size: var(--text-large);
+    margin-top: 30px;
+}
+section.movie .item .visual{
+    background-color: red;
+    border: 1px solid var(--color-black);
+    max-width: 430px;
+    height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+
+    transition: all 0.5s;
+}
+section.movie .item .movieImage{
+
+    width: 240px;
+    height: 300px;
+    margin: 0 auto;
+    /* font-size: 0;
+    max-width: 300px;
+    width: 100%;
+    height: 430px;
+    margin: 0 auto;
+    padding-top: 30px; */
+    
+}
+
+
+section.movie .item .movieImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+section.movie .inner{
+    position: relative;
+}
+section.movie .inner .prevArrow,
+section.movie .inner .nextArrow{
+    color: var(--color-black);
+    position: absolute;
+    top: -15%;
+    right: 0%;
+    border-radius: 50%;
+    border: 1px solid var(--color-black);
+    box-sizing: border-box;
+}
+section.movie .inner .prevArrow i,
+section.movie .inner .nextArrow i{
+    font-size: 70px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+section.movie .inner .prevArrow{
+    right: 100px;
+}
+section.movie .inner .prevArrow i{
+    /* right: 10%; */
+}
+section.movie .inner .nextArrow i{
+    /* right: 0%; */
+}
+
+
+section.movie .inner .slider .visual .hovertext{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    border:  1px solid var(--color-white);
+    border-radius: 50px;
+    width: 160px;
+    height: 60px;
+    line-height: 2;
+    text-align: center;
+
+    display: none;
+}
+section.movie .inner .slider .visual em{
+    font-family: 'SF_HambakSnow';
+    font-size: var(--text-large);
+    /* display: flex;
+    gap: 5px; */
+}
+section.movie .slider .item .hiddenIamge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: red;
+    border: 2px solid black;
+}
+section.movie .slider .item .hiddenIamge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section.movie .slider .item .visual .contents {
+    position: relative;
+    z-index: 10;
+}
+
+section.movie .slider .item .visual:hover  {}
+
+/* 포스터 호버했을때 */
+/* section.movie .slider .item .visual:hover{
+    background-image: url(../images/movie4-missimg.png);
+    background-size: cover;
+    filter: brightness(30%);
+
+
+    box-sizing: border-box;
+} */
+/* section.movie .slider .item .visual:hover div{
+    display: none;
+} */
+/* section.movie .inner .slider .visual:hover .hovertext{
+    display: block;
+} */
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+	</style>
+	<script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<h1>요소의 속성값 가져오기, 변경하기</h1>
+
+<div id="hello.world"></div>
+
+
+
+<script>
+	// $(선택자).attr(속성, 값);
+	
+	// 1. 요소의 속성값 추가, 변경
+	// $("div").attr("id", "test");
+	// $("div").attr("class", "testClass");
+	
+	
+	// 2. 요소의 속성값 가져오기
+	// const id = $("div").attr("id");
+	
+	// console.log( id );
+	
+	// $("div").attr("id").replace(".world", ".test");
+	
+	
+	const str = "안녕하세요";
+	const newStr = str.replace("안", "유");
+	
+	console.log(str);
+	console.log(newStr);
+	
+	                   // "hello.world" => "hello.png"
+	const replaceStr = $("div").attr("id").replace(".world", ".png");
+	
+	$("div").attr("id", replaceStr);
+	
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+body{
+    background-color: #000;
+}
+.slider{
+    width: 1200px;
+    margin: 0 auto;
+    border: 5px solid #000;
+    /* font-size: 0; */
+}
+.slider .box{
+    height: 700px;
+}
+.slider .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 100;
+}
+.arrow.prevArrow{
+    left: 50px;
+}
+.arrow.nextArrow{
+    right: 50px;
+}
+.sliderNav{
+    width: 100%;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.sliderNav .myDots{
+    display: flex;
+    justify-content: center;
+}
+.sliderNav .myDots li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    margin: 10px;
+    cursor: pointer;
+
+    transition: all 0.3s;
+    opacity: 0.5;
+    transform:  translateY(10px);
+}
+.sliderNav .myDots li.slick-active{
+    background-color: navy;
+    transform: translateY(0);
+    opacity: 1;
+}
+.sliderNav .myDots li button{
+    display: none;
+}
+
+@media (max-width: 1024px){
+    .slider{
+        width: 100%;
+    }
+    .sliderNav{
+        background-color: greenyellow;
+    }
+}
+
+@media (max-width: 767px){
+    .sliderNav{
+        background-color: rebeccapurple;
+    }
+}

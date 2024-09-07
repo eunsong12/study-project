@@ -1,0 +1,59 @@
+#root{}
+
+body {
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+section.about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: gray;
+}
+section.about .content {
+	max-width: 800px;
+	width: 100%;
+}
+section.about .head h1 {
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section.about .body {
+    background: blue;
+	margin-top: 30px;
+}
+section.about .body .tabmenu {
+	display: flex;
+}
+section.about .body .tabmenu li {
+	flex: 1;
+	border-right: 1px solid #ddd;
+	border-top: 2px solid transparent;
+	padding: 5px 0;
+	background: #eee;
+	text-align: center;
+	font-weight: 400;
+	transition: 0.3s;
+	cursor: pointer;
+}
+section.about .body .tabmenu li:last-child {
+	border-right: none;
+}
+section.about .body .tabmenu li.active {
+	background: white;
+	border-top-color: blue;
+}
+section.about .body .descriptions {
+	background: #fff;
+	padding: 40px 20px;
+	box-sizing: border-box;
+}
+section.about .body .descriptions .group {
+	display: none;
+}
+section.about .body .descriptions .group.active {
+	display: block;
+}

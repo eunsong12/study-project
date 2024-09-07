@@ -1,0 +1,54 @@
+section{}
+section h2{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+section article{}
+section article header{
+    width: 100%;
+    max-width: 1200px;
+    height: 100px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+
+/*노트북 &태블릿 1024px 이상 1279px 이하 */
+/* @media (min-width:1024px) and (max-width: 1279px) {
+    section article header{
+        background-color: orange;
+    }
+} */
+/* 태블릿 세로 & 태블릿 가로 */
+/* @media (min-width: 768px)and (max-width: 1023px) {
+    section article header{
+        background-color: dodgerblue;
+    }
+} */
+
+
+/* 모바일 */
+@media (max-width: 767px) {
+    section article header{
+        background-color: purple;
+    }
+}
+
+/* 간략화 min을 생략하고 씀. 순서가 중요.*/
+@media (max-width: 1279px) {
+    section .header{
+        background-color: yellowgreen;
+    }
+}
+@media (max-width: 1023px) {
+    section .header{
+        background-color: purple;
+        
+    }
+}
+@media (max-width: 767px) {
+    section .header{
+        background-color: orange;
+    }
+}

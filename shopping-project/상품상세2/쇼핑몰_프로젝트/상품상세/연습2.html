@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		body {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+		}
+		div {
+			width: 100px;
+			border: 2px solid red;
+		}
+		div img {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+
+<div>
+	<a href="#">
+		<img src="images/popup_icon_sound.png" alt="sound">
+	</a>
+</div>
+
+<div>
+	<a href="#">
+		<img src="images/popup_icon_play.png" alt="123123123">
+	</a>
+</div>
+
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+	
+	// const a = $("div:nth-child(2) img").attr("alt"); // sound
+	//
+	// console.log(   a   );
+	//
+	// // a : sound            "xound";
+	// const replaceData = a.replace("s", "x"); // xound
+	//
+	// $("div:nth-child(1) img").attr("alt", replaceData)
+	
+	// $("div:nth-child(1) img").attr("alt", "안녕하세요");
+	
+	
+	// SRC : "images/popup_icon_sound.png"
+	//       "images/popup_icon_sound-on.png"
+	
+	// const src = $("div:nth-child(1) img").attr("src"); // "images/popup_icon_sound.png"
+	
+	// const replaceSrc = src.replace(".png", "-on.png"); // "images/popup_icon_sound-on.png"
+	
+	// $("div:nth-child(1) img").attr("src", replaceSrc);
+	
+	
+	
+	$("div").on("mouseenter", function () {
+		
+		const imgTag = $(this).find("img");
+		const imgTagSrc = imgTag.attr("src");
+		const replaceSrc = imgTagSrc.replace(".png", "-on.png");
+		imgTag.attr("src", replaceSrc);
+		
+	}).on("mouseleave", function () {
+		
+		const imgTag = $(this).find("img");
+		const imgTagSrc = imgTag.attr("src"); // images/sound-on.png
+		const replaceSrc = imgTagSrc.replace("-on.png", ".png"); // // images/sound.png
+		imgTag.attr("src", replaceSrc);
+	});
+	
+</script>
+</body>
+</html>

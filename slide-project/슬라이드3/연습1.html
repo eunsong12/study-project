@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/slick.css">
+
+    <style>
+        .slider{
+            width: 1000px;
+            margin: 0 auto;
+            background: dodgerblue;
+        }
+        .slider .slick-list{
+            margin: 0 -20px;
+        }
+        .slider .slick-slide{
+            margin: 0 20px;
+        }
+        .slider .item{
+            background: orange;
+            box-sizing: border-box;
+            border: 5px solid black;
+            padding: 20px 0;
+        }
+        .slider .item h2{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        .container{
+            display: none;
+            width: 900px;
+            margin: 0 auto;
+            background: green;
+            display: flex;
+        }
+        .container .box{
+            display: none;
+            width: 33.3333%;
+            height: 300px;
+            margin: 0 50px;
+            background: red;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    
+    <div class="slider">
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+        <div class="item"><h2>Lorem, ipsum dolor.</h2></div>
+    </div>
+
+
+
+
+    <script src="common/js/jquery-3.7.1.min.js"></script>
+    <script src="common/js/slick.min.js"></script>
+    <script>
+        $(".slider").slick({
+
+            slidesToShow: 3,
+            arrows: false,
+
+        });
+    </script>
+</body>
+</html>

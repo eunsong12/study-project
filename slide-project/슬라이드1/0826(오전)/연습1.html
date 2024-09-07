@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		section {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.wrap {
+			display: flex;
+			gap: 40px;
+		}
+		.wrap div {
+			padding: 20px 40px;
+			border: 2px solid black;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.wrap div.active {
+			background: red;
+		}
+		.buttons {
+			margin-top: 100px;
+		}
+		.buttons button {
+			font-size: 1.5rem;
+			margin: 10px;
+		}
+		h1 {
+			font-size: 50px;
+			font-weight: bold;
+		}
+		
+	</style>
+	
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/연습1.js"></script>
+</head>
+<body>
+
+<section>
+	<div class="wrap">
+		<div class="box active">box 0</div>
+		<div class="box">box 1</div>
+		<div class="box">box 2</div>
+		<div class="box">box 3</div>
+		<div class="box">box 4</div>
+	</div>
+	
+	<h1>0</h1>
+	
+	<div class="buttons">
+		<button class="prev">PREV</button>
+		<button class="next">NEXT</button>
+	</div>
+</section>
+
+</body>
+</html>

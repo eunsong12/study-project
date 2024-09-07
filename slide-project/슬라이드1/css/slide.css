@@ -1,0 +1,71 @@
+.slider{
+    border:  5px solid red;
+}
+.slider .box{
+    border: 5px solid black;
+}
+ul.slick-dots{
+    background: dodgerblue;
+    display: flex;
+    justify-content: center;
+}
+ul.slick-dots li{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: mediumaquamarine;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scale(0.5);
+}
+ul.slick-dots li.slick-active{
+    background-color: mediumblue;
+    transform: scale(1);
+}
+
+ul.slick-dots li button{
+    display: none;
+}
+
+/* .sliderNav{
+    display: flex;
+} */
+.sliderNav .myItem{
+    display: flex;
+}
+.sliderNav .myItem li{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: orange;
+    margin: 10px;
+}
+/* .sliderNav div{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: orange;
+    margin: 10px;
+} */
+.sliderNav .myItem li button{
+    display: none;
+}
+.sliderNav .myItem li.slick-active{
+    background-color: red;
+}
+.prevArrow, .nextArrow{
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    position: absolute;
+    top: 500px;
+    z-index: 100;
+    cursor: pointer;
+}
+.prevArrow{
+    left: 100px;
+}
+.nextArrow{
+    right: 100px;
+}

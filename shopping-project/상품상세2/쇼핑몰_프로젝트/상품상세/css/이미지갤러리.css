@@ -1,0 +1,58 @@
+/* XEICON */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+#root {}
+
+section.imageGallery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 20px;
+}
+section.imageGallery .productImage {
+	max-width: 700px;
+	width: 100%;
+	font-size: 0;
+	border: 1px solid #ccc;
+}
+section.imageGallery .productImage img {
+	width: 100%;
+}
+
+section.imageGallery .sideBar {
+	width: 100px;
+	border: 1px solid #ccc;
+	padding: 8px;
+}
+section.imageGallery .productMenu {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+section.imageGallery .productMenu li {
+	font-size: 0;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+section.imageGallery .productMenu li.active {
+	border: 1px solid #000;
+}
+
+section.imageGallery .productMenu li img {
+	width: 100%;
+}
+
+section.imageGallery .arrows {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+section.imageGallery .arrows button {
+	background: #efefef;
+	padding: 5px;
+	border: none;
+	font-size: 22px;
+	cursor: pointer;
+}
+section.imageGallery .arrows button i {}
