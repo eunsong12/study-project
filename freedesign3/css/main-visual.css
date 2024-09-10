@@ -38,49 +38,74 @@ body{}
     margin: 0 auto;
     max-width: 1720px;
     width: 100%;
-    /* background-color: red; */
+    box-sizing: border-box;
 }
 
 /* 헤더 */
 header{}
 header .inner{}
 header div.emoticon{
-    display: flex;
+    /* display: flex; */
+    flex-direction: column;
     position: fixed;
     z-index: 900;
-    top: 20px;
-    right: 20px;
+    /* top: 20px; */
+    /* right: 20px; */
+    /* gap: 10px; */
 }
 header .emoticon .sound{
     display: flex;
-    gap: 0;
+    gap: 3px;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    /* text-align: center; */
     top: 80px;
+    /* width: 100%; */
 }
 header .emoticon .sound img{
-    width: 20px;
+    width: 25px;
+    transition: all 0.3s;
 }
 header .emoticon .sound i{
     font-size: var(--text-base);
+    transition: all 0.3s;
 }
-
+header .emoticon .menu{
+    position: fixed;
+    /* text-align: center; */
+    right: 50px;
+    top: 20px;
+    /* background-color: red; */
+}
+/* 하얀색만 있는 이모티콘은 배경화면이 하얀색일때 안 보임.
+  애초부터 그림자 있는 이모티콘을 주고, 호버하면 크기가 커지도록 하는건? */
 header .emoticon .menu .menu1{
     position: relative;
-    width: 40px;
+    width: 100%;
+    /* text-shadow: 0 0 5px #000; */
+    transition: all 0.3s;
 }
 header .emoticon .menu .menu2{
     position: absolute;
     width: 50px;
-    left: -45px;
+    /* left: -45px; */
+    right: -5px;
     top: -5px;
     
     display: none;
 }
-header .emoticon .menu:hover .menu1{
+/* header .emoticon .menu:hover .menu1{
     display: none;
+} */
+header .emoticon .menu:hover .menu1{
+    /* display: block; */
+    width: 115%;
+    
+    transform: translate(-5%, -5%);
+
 }
-header .emoticon .menu:hover .menu2{
-    display: block;
-}
+
 div.menu-back{
     display: none;
 
@@ -93,6 +118,15 @@ div.menu-back{
     /* 여기서 그라디언트 주는것보다 포토샵에서 수정해서 이미지 넣는게 더 빠를듯 */
 
     /* before, after / 필터로 넣는 방법 생각해보기 */
+}
+div.modal {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    height: 100vh;
 }
 div.modal img{
     width: 100%;
@@ -108,35 +142,49 @@ div.modal .modal-list{
     display: flex;
     flex-direction: column;
     gap: 60px;
-}
-div.modal div{
     color: var(--color-white);
     font-family: 'SBAggroB';
     font-size: var(--text-Xlarge);
 }
+div.modal div{}
+
 
 
 /* 메인배경 이미지 */
-section.mainvisual{}
+
+section.mainvisual {
+    box-sizing: border-box;
+    /* background-color: red; */
+    overflow: hidden;
+}
 section.mainvisual .mainvisual-back{}
 section.mainvisual .visualContainer{
     background-color: var(--color-background);
     height: 100vh;
-
     position: relative;
+    box-sizing: border-box;
 }
 
+
 /* margin: 200px auto를 주면 부모요소를 안벗어나고 늘어나야 하지 않나?? 왜 부모요소를 벗어나면서 공간이 생기지? */
-section.mainvisual .visual-totoro{
-    /* display: none; */
-    
-    max-width: 800px;
-    width: 100%;
-    font-size: 0;
-    margin: 0 auto;
+section.mainvisual .inner{
+    position: relative;
     /* background-color: red; */
-    padding-top: 200px;
-    box-sizing: border-box;
+    height: 100%;
+}
+section.mainvisual .visual-totoro{
+    position: absolute;
+    /* background-color: red; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* font-size: 0; */
+    /* max-width: 800px; */
+    /* width: 100%; */
+    /* height: 660px; */
+    /* margin: 0px auto; */
+    /* padding-top: 130px; */
 }
 section.mainvisual .visual-totoro img{
     width: 100%;
@@ -146,11 +194,11 @@ section.mainvisual .visual-totoro img{
 /* position을 안주고 오른쪽 맞춤 할 수 있는 방법은 없을까? */
 section.mainvisual .visual-castle{
     display: none;
-
     position: absolute;
-    max-width: 1889px;
+    max-width: 1700px;
     width: 100%;
     font-size: 0;
+    top: 0;
     right: 0;
     /* padding-bottom: 0;
     padding-right: 0; */
@@ -164,18 +212,19 @@ section.mainvisual .visual-castle img{
 
 
 /* mainvisual init Animation */
-section.mainvisual .inner{
-    position: relative;
-}
+
+
+
 section.mainvisual .visual-totoro{
-    transition: all 1s;
+    transition: all 3s;
 }
 section.mainvisual .visual-totoro.active{
-    position: absolute;
     width: 180px;
     z-index: 100;
     left: 0;
     top: 0;
-    padding: 0;
+    transform: translate(0%);
 }
+
+
 /* 1920 * 1080 */
